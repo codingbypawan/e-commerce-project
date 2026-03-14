@@ -1,0 +1,65 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.login-container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 8px;
+  text-align: left;
+  background-color:#ccc;
+}
+
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.register-container  {
+  width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 8px;
+  text-align: left;
+  background-color:#ccc;
+}
+
+.register-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.product-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+.product-image {
+  height: 200px;
+  width: 100%;
+}
+
+.cart-card {
+  margin: 10px;
+  width: 100%;
+}
+
+.cart-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+.App {
+  width: 100%;
+}
+
