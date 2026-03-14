@@ -1,15 +1,16 @@
 ---
 name: git-commit-push
-description: "Commit and push code changes to a Git remote. Use when: committing code, pushing changes, git commit, git push, staging files, creating commits with messages."
+description: "Commit and push code changes to a Git remote and create pull requests. Use when: committing code, pushing changes, git commit, git push, staging files, creating commits with messages, creating PR, pull request, merge request."
 argument-hint: "Describe what changes to commit, or leave blank to auto-detect"
 ---
 
-# Git Commit & Push
+# Git Commit, Push & PR
 
 ## When to Use
 - Committing staged or unstaged changes with a proper commit message
 - Pushing committed changes to the remote branch
 - Staging, committing, and pushing in one workflow
+- Creating a pull request after pushing changes
 
 ## Procedure
 
@@ -49,6 +50,15 @@ argument-hint: "Describe what changes to commit, or leave blank to auto-detect"
    - If pushing for the first time: `git push --set-upstream origin <branch-name>`
 
 5. **Verify** — Confirm the push succeeded and the remote is up to date.
+
+6. **Create a Pull Request** (if requested)
+   - Use the GitHub CLI (`gh`) to create a PR:
+     ```bash
+     gh pr create --base <target-branch> --head <current-branch> --title "<type>: <short summary>" --body "<description of changes>"
+     ```
+   - Default base branch is `main` unless the user specifies otherwise.
+   - The PR title should follow the same Conventional Commits format as the commit message.
+   - The PR body should include a brief summary and list of changes.
 
 ## Notes
 - Always review `git status` before committing to avoid including unintended files.
